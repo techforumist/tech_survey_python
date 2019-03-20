@@ -125,6 +125,7 @@ STATIC_URL = '/static/'
 REST_FRAMEWORK = {
 
     # add permission for edit the value for only logged users
-    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticatedOrReadOnly',)
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticated',),
+    'DEFAULT_AUTHENTICATION_CLASSES':('rest_framework_simplejwt.authentication.JWTAuthentication',)
 
 }
